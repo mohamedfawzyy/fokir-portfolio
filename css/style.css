@@ -63,22 +63,29 @@ h2{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.8);
 
 }
 .navbar{
-    width: 90%;
-    margin: auto;
+    width: 100vw;
     padding: 10px;
-    margin-top: 10px;
     position: fixed;
-    left:90px
+    background-color: #0008;
+    z-index: 999;
+
+
+}
+.navbar .inner{
+    width: 80%;
+    margin: auto;
+
 }
 .navLogo{
     float: left;
 }
 .navLinks{
     float: right;
+   
 }
 
 .navLogo a{
@@ -103,8 +110,8 @@ h2{
     color: rgb(233, 44, 84);
 }
 .homeContent{
-    margin-top: 50px;
-    padding-top: 50px;
+    margin-top: 100px;
+    padding-top: 100px;
     font-family: 'Source Sans 3', sans-serif;
 }
 .homeContent :first-child{
@@ -119,20 +126,69 @@ h2{
 }
 .homeContent p:nth-of-type(2){
     font-size: 26px;
+
 }
+.homeContent p:nth-of-type(2)::after{
+    content: "Designer |";
+    animation: typing 4s infinite alternate ;
+
+}
+@keyframes typing{
+    0%{content: "Designe|";}
+    3%{content: "Design|";}
+    6%{content: "Desig|";}
+    9%{content: "Desi|";}
+    12%{content: "Des|";}
+    15%{content: "De|";}
+    18%{content: "D|";}
+    21%{content: "|";}
+    24%{content: "D|";}
+    27%{content: "De|";}
+    30%{content: "Dev|";}
+    33%{content: "Deve|";}
+    36%{content: "Devel|";}
+    39%{content: "Develo|";}
+    41%{content: "Develop|";}
+    44%{content: "Develope|";}
+    47%{content: "Developr |";}
+    50%{content: "Develop|";}
+    53%{content: "Develo|";}
+    56%{content: "Devel|";}
+    59%{content: "Deve|";}
+    61%{content: "Dev|";}
+    64%{content: "De|";}
+    67%{content: "D|";}
+    70%{content: "|";}
+    73%{content: "D|";}
+    76%{content: "De|";}
+    79%{content: "Des|";}
+    81%{content: "Desi|";}
+    84%{content: "Desig|";}
+    88%{content: "Design|";}
+    91%{content: "Designe|";}
+    94%{content: "Ddesigner|";}
+    97%{content: "Designer |";}
+
+}
+
+
 /* about section */
 #about{
     margin-top: 50px;
 }
 .aboutImg{
     float: left;
-    width: 30%;
+    width: 40%;
     margin-top: 20px;
     margin-left: 30px;
+   
+
 }
 .box{
     border: 5px solid #555555;
     border-radius: 5px;
+    width: 65%;
+    margin-left: 30%;
 }
 .imgLayout {
     position: relative;
@@ -165,16 +221,20 @@ h2{
     position: relative;
     top: 50%;
 }
-.socialLinks img{
-    width: 40px;
-    height: 50px;
+.socialLinks i{
+    color:#fff;
+    font-size: 24px;
     border-radius: 50%;
     margin-inline: 5px;
 }
+.socialLinks i:hover{
+    color:#E92C54;
+    
+}
 .aboutContent{
     float: left;
-    width: 60%;
-    margin-left: 50px;
+    width: 50%;
+    margin-left: 30px;
     padding-left: 50px;
 }
 .aboutContent h3{
@@ -233,6 +293,7 @@ h2{
 
 #services .container{
     width: 98%;
+    text-align: center;
 }
 .serviceItem{
     float: left;
@@ -274,16 +335,20 @@ h2{
     text-align: center;
     margin-block: 20px;
     overflow: hidden;
-
+  
+    padding-block: 8px;
+    text-align: center;
 }
-#portfolio ul  {
-    margin-top: 30px;
-    width: fit-content;
+#portfolio .portlinks ul  {
+    width:fit-content;
     margin: auto;
 }
  #portfolio li{
    float: left;
-    margin-inline: 15px;
+    padding-inline: 15px;
+}
+#portfolio li:first-of-type a{
+    color: #E92C54;
 }
 #portfolio li a{
     font-family: 'Roboto', sans-serif;
@@ -347,48 +412,51 @@ div.works {
     background-color: white;
 }
 .feedbackBox{
-    width: 70%;
+    width: 60%;
     background-color: #F1F1F1;
-    position: relative;
     margin: auto;
     margin-top: 20px;
     border-radius: 10px;
 }
 .triangle{
-    width: 0px;
+    width: 0;
     height: 0; 
-    position: absolute;
     border-top: 80px solid #E92C54;
     border-left: 80px solid #E92C54;
     border-right: 80px solid  transparent;
     border-bottom: 80px solid transparent;
     border-top-left-radius: 10px;
 }
-.feedbackImg img{
+.layers {
+    width: fit-content;
+    float: left;
+    position: relative;
+    
+    
+    
+}
+.layers img{
     width: 100px;
     height: 100px;
     border-radius: 50%;
     position: absolute;
     top: 30px;
     left: 30px;
-}
-.layers {
-    float: left;
-}
-
-.layers{
-    width: 20%;
+    
 }
 .feedbackContent{
-    float: right;
-    width: 80%;
+    float: left;
+    width: 70%;
     text-align: left;
     padding-top: 20px;
+    
+    padding-left: 20px;
 }
 .feedbackContent h3{
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 700;
     font-size: 26px;
+    
 }
 .feedbackContent>img{
     width: 100px;
@@ -420,6 +488,13 @@ div.works {
 }
 .blogItem img{
     width: 100%;
+    min-height:240px;
+    object-fit: cover;
+}
+.blogItem iframe{
+    width: 100%;
+    min-height:240px;
+    object-fit: cover;
 }
 
 .blogItem .inner{
@@ -456,45 +531,46 @@ div.works {
 
 form{
     margin-top: 30px;
-   
     text-align: left;
-    width: 60%; 
+    width: 50%; 
     margin: auto;
-    padding-left: 50px;
     padding-block: 30px;
     
 }
 
 input {
     padding: 10px;
-    border: none;
     border-radius: 5px;
     margin-block: 10px;
     border: 1px solid #CCCCCC;
 
 }
-input#name,input#email{
-    width:46%;
-    margin-right:10px;
-
-
+input#name{
+    width:49%;
+    float: left;
+}
+input#email{
+    width:49%;
+    float: right;
 }
 input#subject{
-    width: 95%;
+    width: 100%;
 }
 textarea{
     border: none;
     padding: 10px;
-    width: 95%;
+    width: 100%;
     border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    resize: both;
 }
 button{
  margin-top: 20px;
- padding: 10px;
+ padding: 15px 20px;
  background-color: #E92C54;
  border: none;
  border-radius: 5px;
-    color: aliceblue;
+ color: aliceblue;
 }
 button:hover {
     background-color: #EC2403;
@@ -506,10 +582,17 @@ button:hover {
     text-align: center;
     padding: 50px;
 }
-#footer img{
-    width:30px;
-    margin-inline: 10px;
+#footer i{
+   color: #fff;
+   margin-inline: 10px;
+   margin-bottom: 10px;
+   font-size: 20px;
 }
+#footer i:hover{
+    color: #E92C54;
+}
+    
+
 #footer p{
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
